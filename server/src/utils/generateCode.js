@@ -1,0 +1,18 @@
+import crypto from "crypto";
+
+const generateCode = () => {
+  const mainString =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+  let shortCode = "";
+
+  for (let i = 0; i < 6; i++) {
+    shortCode += mainString.charAt(Math.floor(Math.random() * 62));
+  }
+
+  //   const randomCode = crypto.randomBytes(6).toString("base64").slice(0, 6);
+
+  return shortCode;
+};
+
+export default generateCode;
