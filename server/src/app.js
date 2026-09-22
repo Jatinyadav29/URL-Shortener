@@ -3,6 +3,7 @@ import appRoute from "./routes/url.router.js";
 import urlRoute from "./routes/redirect.route.js";
 
 const app = express();
+
 app.use(express.json());
 
 app.use("/api/url", appRoute);
